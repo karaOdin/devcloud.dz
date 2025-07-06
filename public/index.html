@@ -125,26 +125,10 @@
                                 <span class="code-dot green"></span>
                                 <span class="code-title">DevCloud Terminal</span>
                             </div>
-                            <div class="code-content">
+                            <div class="code-content" id="terminal-content">
                                 <div class="code-line">
                                     <span class="code-prompt">$</span>
-                                    <span class="code-command">devcloud init my-saas</span>
-                                </div>
-                                <div class="code-line">
-                                    <span class="code-output">✓ SaaS platform initialized</span>
-                                </div>
-                                <div class="code-line">
-                                    <span class="code-output">✓ Database configured</span>
-                                </div>
-                                <div class="code-line">
-                                    <span class="code-output">✓ Authentication ready</span>
-                                </div>
-                                <div class="code-line">
-                                    <span class="code-output">✓ Payment integration active</span>
-                                </div>
-                                <div class="code-line active">
-                                    <span class="code-prompt">$</span>
-                                    <span class="code-command typing">deploy --production</span>
+                                    <span class="code-command">Initializing DevCloud Terminal...</span>
                                     <span class="cursor">|</span>
                                 </div>
                             </div>
@@ -710,6 +694,152 @@
                 navMenu.classList.remove('active');
                 toggle.classList.remove('active');
             });
+        });
+
+        // Animated Terminal
+        class AnimatedTerminal {
+            constructor(elementId) {
+                this.terminal = document.getElementById(elementId);
+                this.currentSequence = 0;
+                this.isRunning = false;
+                
+                // Define command sequences
+                this.sequences = [
+                    {
+                        commands: [
+                            { type: 'command', text: 'devcloud init my-saas', delay: 80 },
+                            { type: 'output', text: '✓ SaaS platform initialized', delay: 500 },
+                            { type: 'output', text: '✓ Database configured', delay: 300 },
+                            { type: 'output', text: '✓ Authentication ready', delay: 300 },
+                            { type: 'output', text: '✓ Payment integration active', delay: 300 },
+                            { type: 'command', text: 'deploy --production', delay: 80 },
+                            { type: 'output', text: '🚀 Deploying to production...', delay: 800 },
+                            { type: 'output', text: '✓ Build completed successfully', delay: 600 },
+                            { type: 'output', text: '✓ Application deployed!', delay: 500 }
+                        ]
+                    },
+                    {
+                        commands: [
+                            { type: 'command', text: 'devcloud create cloudroutes', delay: 80 },
+                            { type: 'output', text: '📍 Creating transport management system...', delay: 600 },
+                            { type: 'output', text: '✓ Route optimizer configured', delay: 400 },
+                            { type: 'output', text: '✓ Fleet tracking enabled', delay: 400 },
+                            { type: 'output', text: '✓ Payment gateway integrated', delay: 400 },
+                            { type: 'command', text: 'start --mode=production', delay: 80 },
+                            { type: 'output', text: '🚌 CloudRoutes is live!', delay: 700 },
+                            { type: 'output', text: '📊 Processing 15,420 daily passengers', delay: 600 }
+                        ]
+                    },
+                    {
+                        commands: [
+                            { type: 'command', text: 'devcloud scaffold crm-system', delay: 80 },
+                            { type: 'output', text: '🏢 Building enterprise CRM...', delay: 600 },
+                            { type: 'output', text: '✓ Customer management module ready', delay: 500 },
+                            { type: 'output', text: '✓ Sales pipeline configured', delay: 400 },
+                            { type: 'output', text: '✓ Analytics dashboard created', delay: 400 },
+                            { type: 'command', text: 'test --coverage', delay: 80 },
+                            { type: 'output', text: '✅ All tests passed (98% coverage)', delay: 700 },
+                            { type: 'output', text: '🎉 Ready for client delivery!', delay: 500 }
+                        ]
+                    }
+                ];
+                
+                this.startAnimation();
+            }
+            
+            async startAnimation() {
+                if (this.isRunning) return;
+                this.isRunning = true;
+                
+                // Clear initial loading message
+                await this.clearTerminal();
+                
+                while (this.isRunning) {
+                    await this.runSequence(this.sequences[this.currentSequence]);
+                    await this.sleep(2000); // Pause between sequences
+                    await this.clearTerminal();
+                    this.currentSequence = (this.currentSequence + 1) % this.sequences.length;
+                }
+            }
+            
+            async runSequence(sequence) {
+                for (const cmd of sequence.commands) {
+                    if (cmd.type === 'command') {
+                        await this.typeCommand(cmd.text, cmd.delay);
+                    } else {
+                        await this.showOutput(cmd.text, cmd.delay);
+                    }
+                }
+            }
+            
+            async typeCommand(text, typingSpeed = 80) {
+                const line = this.createLine();
+                const prompt = this.createElement('span', 'code-prompt', '$');
+                const command = this.createElement('span', 'code-command', '');
+                const cursor = this.createElement('span', 'cursor', '|');
+                
+                line.appendChild(prompt);
+                line.appendChild(command);
+                line.appendChild(cursor);
+                this.terminal.appendChild(line);
+                
+                // Type each character
+                for (let i = 0; i <= text.length; i++) {
+                    command.textContent = text.substring(0, i);
+                    await this.sleep(typingSpeed);
+                }
+                
+                // Remove cursor and add small pause
+                cursor.remove();
+                await this.sleep(300);
+            }
+            
+            async showOutput(text, delay = 500) {
+                await this.sleep(delay);
+                const line = this.createLine();
+                const output = this.createElement('span', 'code-output', text);
+                line.appendChild(output);
+                this.terminal.appendChild(line);
+                
+                // Scroll into view
+                this.terminal.scrollTop = this.terminal.scrollHeight;
+            }
+            
+            async clearTerminal() {
+                // Gentle fade out effect
+                this.terminal.style.opacity = '0.3';
+                await this.sleep(300);
+                this.terminal.innerHTML = '';
+                this.terminal.style.opacity = '1';
+                await this.sleep(200);
+            }
+            
+            createLine() {
+                return this.createElement('div', 'code-line', '');
+            }
+            
+            createElement(tag, className, text) {
+                const element = document.createElement(tag);
+                if (className) element.className = className;
+                if (text) element.textContent = text;
+                return element;
+            }
+            
+            sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            
+            stop() {
+                this.isRunning = false;
+            }
+        }
+        
+        // Initialize terminal when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Small delay to let the page load completely, then start animation
+            setTimeout(() => {
+                const terminal = new AnimatedTerminal('terminal-content');
+            }, 1000);
         });
     </script>
 </body>
