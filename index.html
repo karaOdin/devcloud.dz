@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCloud - Your SaaS, Delivered. Or Ours.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="img/devcloud-logo.png" alt="DevCloud Logo" class="logo-img">
+                    <span class="logo-text">DevCloud</span>
+                </div>
+                
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cloudroutes">CloudRoutes</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <a href="#contact" class="nav-cta">Let's Build</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="container">
+            <div class="announcement-content">
+                <span class="announcement-icon">🚀</span>
+                <span class="announcement-text">
+                    <strong>New:</strong> CloudRoutes v2.0 launched with AI-powered route optimization
+                </span>
+                <a href="#cloudroutes" class="announcement-cta">Learn More →</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-layout">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span>🏆 #1 SaaS Builder in Algeria</span>
+                        </div>
+                        <h1>Your SaaS, Delivered. Or Ours.</h1>
+                        <p>We design, build, and launch complex web platforms. You bring the idea. We own the code.</p>
+                        
+                        <div class="hero-actions">
+                            <a href="#cloudroutes" class="hero-cta primary">Explore CloudRoutes</a>
+                            <a href="#contact" class="hero-cta secondary">Start Your Project</a>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Projects Delivered</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">4</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Support</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-title">DevCloud Terminal</span>
+                            </div>
+                            <div class="code-content">
+                                <div class="code-line">
+                                    <span class="code-prompt">$</span>
+                                    <span class="code-command">devcloud init my-saas</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-output">✓ SaaS platform initialized</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-output">✓ Database configured</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-output">✓ Authentication ready</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-output">✓ Payment integration active</span>
+                                </div>
+                                <div class="code-line active">
+                                    <span class="code-prompt">$</span>
+                                    <span class="code-command typing">deploy --production</span>
+                                    <span class="cursor">|</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founding Story Section -->
+        <section class="founding-story">
+            <div class="container">
+                <div class="quote-box">
+                    <div class="quote-icon">🔗</div>
+                    <div class="quote-content">
+                        <h3>Founded through real product work</h3>
+                        <p>DevCloud launched in 2021 by building the full PSP infrastructure for our first client, <strong>Chargily</strong> — now one of Algeria's most important fintech companies. That spirit of engineering-first partnerships drives us today.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section class="tech-stack-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Built with Modern Tech</h2>
+                    <p>Production-ready stack used by leading SaaS companies</p>
+                </div>
+                
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h3>Backend</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <span class="tech-icon">⚡</span>
+                                <span class="tech-name">Laravel</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🐘</span>
+                                <span class="tech-name">PostgreSQL</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🔥</span>
+                                <span class="tech-name">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h3>Frontend</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <span class="tech-icon">💚</span>
+                                <span class="tech-name">Vue.js</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">⚛️</span>
+                                <span class="tech-name">React</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🎨</span>
+                                <span class="tech-name">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h3>Mobile</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <span class="tech-icon">📱</span>
+                                <span class="tech-name">Flutter</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🔵</span>
+                                <span class="tech-name">React Native</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">📊</span>
+                                <span class="tech-name">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h3>Infrastructure</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <span class="tech-icon">☁️</span>
+                                <span class="tech-name">AWS</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🐳</span>
+                                <span class="tech-name">Docker</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🔄</span>
+                                <span class="tech-name">CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Indicators Section -->
+        <section class="trust-section">
+            <div class="container">
+                <div class="trust-content">
+                    <div class="trust-item">
+                        <div class="trust-icon">🏆</div>
+                        <div class="trust-text">
+                            <strong>50+ Projects</strong>
+                            <span>Successfully delivered</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">⚡</div>
+                        <div class="trust-text">
+                            <strong>2-8 Weeks</strong>
+                            <span>Average delivery time</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🔒</div>
+                        <div class="trust-text">
+                            <strong>Enterprise Grade</strong>
+                            <span>Security & compliance</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🇩🇿</div>
+                        <div class="trust-text">
+                            <strong>Made in Algeria</strong>
+                            <span>Local expertise, global standards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Updates Section -->
+        <section class="updates-section">
+            <div class="container">
+                <div class="updates-header">
+                    <h2>🔥 What's New</h2>
+                    <a href="#blog" class="updates-link">View All Updates →</a>
+                </div>
+                
+                <div class="updates-grid">
+                    <div class="update-card">
+                        <div class="update-date">Dec 2024</div>
+                        <h3>CloudRoutes v2.0 Launch</h3>
+                        <p>AI-powered route optimization and real-time passenger tracking now live.</p>
+                        <div class="update-badge new">New Feature</div>
+                    </div>
+                    
+                    <div class="update-card">
+                        <div class="update-date">Nov 2024</div>
+                        <h3>Chargily Integration Update</h3>
+                        <p>Enhanced payment processing with improved success rates and fraud detection.</p>
+                        <div class="update-badge improvement">Improvement</div>
+                    </div>
+                    
+                    <div class="update-card">
+                        <div class="update-date">Oct 2024</div>
+                        <h3>New Client Onboard</h3>
+                        <p>Government transport authority chooses CloudRoutes for citywide deployment.</p>
+                        <div class="update-badge milestone">Milestone</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What We Build</h2>
+                    <p>Full-stack digital solutions for modern businesses</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">🚀</div>
+                        <h3>SaaS Platforms</h3>
+                        <p>From idea to launch. Multi-tenant, scalable, production-ready.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">🏢</div>
+                        <h3>ERP / CRM Systems</h3>
+                        <p>Enterprise resource planning and customer management solutions.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">📱</div>
+                        <h3>Web & Mobile Apps</h3>
+                        <p>Cross-platform applications with modern UI/UX design.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">💼</div>
+                        <h3>Business Websites</h3>
+                        <p>High-converting landing pages and corporate websites.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">🔌</div>
+                        <h3>API Development</h3>
+                        <p>RESTful APIs, webhooks, and third-party integrations.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">💳</div>
+                        <h3>E-Payment Solutions</h3>
+                        <p>Secure payment gateways and financial transaction systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CloudRoutes Featured Product -->
+        <section id="cloudroutes" class="cloudroutes">
+            <div class="container">
+                <div class="cloudroutes-content">
+                    <div class="cloudroutes-info">
+                        <div class="product-badge">Our Flagship SaaS</div>
+                        <h2>CloudRoutes</h2>
+                        <h3>Smart Bus Fleet Management & E-Payment Platform</h3>
+                        <p>A complete SaaS solution for transportation companies. Manage routes, track fleets, onboard drivers, and process payments through QR codes and smart cards.</p>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <span class="feature-icon">✓</span>
+                                <span>Real-time fleet tracking</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">✓</span>
+                                <span>Route optimization</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">✓</span>
+                                <span>Driver management system</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">✓</span>
+                                <span>QR & smart card payments</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">✓</span>
+                                <span>Analytics dashboard</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">✓</span>
+                                <span>Passenger mobile app</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cloudroutes-cta">
+                            <a href="#demo" class="cta-primary">Request Demo</a>
+                            <a href="#pricing" class="cta-secondary">View Pricing</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cloudroutes-visual">
+                        <div class="dashboard-mockup">
+                            <div class="mockup-header">
+                                <span class="window-control"></span>
+                                <span class="window-control"></span>
+                                <span class="window-control"></span>
+                            </div>
+                            <div class="mockup-content">
+                                <h4>CloudRoutes Dashboard</h4>
+                                <div class="mockup-stats">
+                                    <div class="stat-box">
+                                        <div class="stat-number">247</div>
+                                        <div class="stat-label">Active Vehicles</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-number">15,420</div>
+                                        <div class="stat-label">Daily Passengers</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-number">98.5%</div>
+                                        <div class="stat-label">Uptime</div>
+                                    </div>
+                                </div>
+                                <div class="mockup-chart">
+                                    <div class="chart-placeholder">Revenue Analytics Chart</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose DevCloud -->
+        <section class="why-choose">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose DevCloud</h2>
+                    <p>Technical excellence meets business results</p>
+                </div>
+                
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-number">01</div>
+                        <h3>Elite Engineering</h3>
+                        <p>Our team builds enterprise-grade solutions using modern tech stacks and best practices.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-number">02</div>
+                        <h3>Proven Track Record</h3>
+                        <p>Successfully delivered 50+ projects for startups, SMEs, and enterprise clients.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-number">03</div>
+                        <h3>Full-Stack Expertise</h3>
+                        <p>From database design to UI/UX, we handle every aspect of your digital solution.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-number">04</div>
+                        <h3>Algerian Innovation</h3>
+                        <p>Based in Algeria, we understand local markets while delivering global standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Preview -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recent Work</h2>
+                    <p>Projects that showcase our capabilities</p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">E-Commerce Platform</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>TechMart SaaS</h3>
+                            <p>Multi-vendor marketplace with AI recommendations</p>
+                            <span class="portfolio-tech">React • Node.js • MongoDB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">Healthcare Dashboard</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>MedFlow CRM</h3>
+                            <p>Patient management system for healthcare providers</p>
+                            <span class="portfolio-tech">Vue.js • Laravel • MySQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">Fintech Mobile App</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>PayFast Mobile</h3>
+                            <p>Digital wallet and payment processing app</p>
+                            <span class="portfolio-tech">Flutter • Firebase • Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-cta">
+                    <a href="#contact" class="cta-secondary">View Full Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Ready to Build Something Amazing?</h2>
+                        <p>Let's discuss your project and bring your vision to life.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p>hello@devcloud.dz</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <p>+213 XXX XXX XXX</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <strong>Location</strong>
+                                    <p>M'sila, Algeria</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="project">Project Type</label>
+                                <select id="project" name="project">
+                                    <option value="">Select a service</option>
+                                    <option value="saas">SaaS Platform</option>
+                                    <option value="erp">ERP/CRM System</option>
+                                    <option value="mobile">Mobile App</option>
+                                    <option value="website">Business Website</option>
+                                    <option value="api">API Development</option>
+                                    <option value="cloudroutes">CloudRoutes Demo</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Project Details *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Project Brief</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>DevCloud</h3>
+                    <p>Building the future, one platform at a time.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#cloudroutes">CloudRoutes</a></li>
+                            <li><a href="#services">SaaS Development</a></li>
+                            <li><a href="#portfolio">Case Studies</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#docs">Documentation</a></li>
+                            <li><a href="#help">Help Center</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevCloud. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navMenu = document.querySelector('.nav-menu');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                
+                navMenu.classList.remove('active');
+                toggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
