@@ -1,9 +1,9 @@
-/* TOP CONTACT BAR */
+/* TOP CONTACT BAR - OPTIMIZED */
 .top-contact-bar {
     background: #5D3FD3;
     color: #FFFFFF;
-    padding: 0.4rem 0;
-    font-size: 0.75rem;
+    padding: 0.3rem 0;
+    font-size: 0.7rem;
     font-weight: 600;
 }
 
@@ -96,7 +96,8 @@
 /* DESKTOP RESPONSIVE (1024px and up) */
 @media (min-width: 1024px) {
     .nav-content {
-        min-height: 65px;
+        min-height: 60px;
+        padding: 0.6rem 0;
     }
     
     .logo-text {
@@ -129,8 +130,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 50px;
+    min-height: 45px;
     position: relative;
+    padding: 0.5rem 0;
 }
 
 /* LOGO */
@@ -148,7 +150,7 @@
 }
 
 .logo-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 900;
     color: #5D3FD3;
     letter-spacing: -0.02em;
@@ -227,9 +229,9 @@
     color: #000000;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     letter-spacing: 0.02em;
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 0.8rem;
     border: 2px solid transparent;
     transition: all 0.2s ease;
     display: block;
@@ -251,12 +253,12 @@
     background: #5D3FD3;
     color: #FFFFFF;
     border: 2px solid #000000;
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: 0.02em;
-    box-shadow: 3px 3px 0px #000000;
+    box-shadow: 2px 2px 0px #000000;
     transition: all 0.2s ease;
 }
 
@@ -305,26 +307,27 @@
 /* DESKTOP RESPONSIVE (1024px and up) */
 @media (min-width: 1024px) {
     .nav-content {
-        min-height: 60px;
+        min-height: 55px;
+        padding: 0.7rem 0;
     }
     
     .logo-text {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     
     .nav-links {
-        margin-right: 2rem;
+        margin-right: 1.5rem;
     }
     
     .nav-link {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-        margin: 0 0.3rem;
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+        margin: 0 0.2rem;
     }
     
     .nav-cta {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.4rem;
+        font-size: 0.85rem;
+        padding: 0.5rem 1.2rem;
     }
 }
 
